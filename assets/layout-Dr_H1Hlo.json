@@ -1,0 +1,261 @@
+{
+  "root": {
+    "type": "Container",
+    "components": {
+      "startScreen": {
+        "type": "StartScreenComponent",
+        "enabled": true,
+        "data": {}
+      }
+    },
+    "children": {
+      "content": {
+        "type": "Container",
+        "components": {
+          "responsivePosition": {
+            "type": "ResponsiveNodePositionComponent",
+            "enabled": true,
+            "data": {
+              "mode": "screen",
+              "position": {
+                "cx": 0,
+                "cy": 0
+              }
+            }
+          }
+        },
+        "children": {
+          "taglineText": {
+            "type": "Text",
+            "props": {
+              "text": "Love is...",
+              "style": "startTagline",
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "y": -550
+            }
+          },
+          "logoSprite": {
+            "type": "Sprite",
+            "props": {
+              "asset": "images/logo.png",
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "y": -150,
+              "scale": 0.6
+            }
+          },
+          "startButton": {
+            "type": "Container",
+            "components": {
+              "startButton": {
+                "type": "StartButtonComponent",
+                "enabled": true,
+                "data": {
+                  "eventType": "START__CLICK"
+                }
+              }
+            },
+            "actions": {
+              "tapPress": {
+                "type": "ButtonTapPressAction",
+                "data": {}
+              },
+              "revealScale": {
+                "type": "ButtonRevealScaleAction",
+                "data": {}
+              },
+              "startButtonIdleLoop": {
+                "type": "StartButtonIdleLoopAction",
+                "data": {}
+              }
+            },
+            "props": {
+              "visible": false,
+              "y": 280
+            },
+            "children": {
+              "background": {
+                "type": "Sprite",
+                "props": {
+                  "asset": "images/btn.png",
+                  "anchor": {
+                    "x": 0.5,
+                    "y": 0.5
+                  }
+                }
+              },
+              "label": {
+                "type": "Text",
+                "props": {
+                  "text": "Любить",
+                  "style": "storyButton",
+                  "anchor": {
+                    "x": 0.5,
+                    "y": 0.5
+                  }
+                }
+              }
+            }
+          },
+          "romance": {
+            "type": "Container",
+            "props": {
+              "y": 500
+            },
+            "children": {
+              "romanceStatusText": {
+                "type": "Text",
+                "props": {
+                  "text": "Статус: первое свидание",
+                  "style": "startStatusText",
+                  "anchor": {
+                    "x": 0,
+                    "y": 0.5
+                  },
+                  "x": -264,
+                  "y": -40
+                }
+              },
+              "romanceBar": {
+                "type": "Container",
+                "children": {
+                  "background": {
+                    "type": "Container",
+                    "components": {
+                      "surface": {
+                        "type": "RoundedRectSurfaceComponent",
+                        "enabled": true,
+                        "data": {
+                          "width": 528,
+                          "height": 28,
+                          "radius": 14,
+                          "fillColor": "#FFF1F6",
+                          "fillAlpha": 1
+                        }
+                      }
+                    }
+                  },
+                  "fill": {
+                    "type": "Container",
+                    "components": {
+                      "fillSurface": {
+                        "type": "ProgressBarFillComponent",
+                        "enabled": true,
+                        "data": {
+                          "width": 528,
+                          "height": 28,
+                          "radius": 14,
+                          "fillColor": "#F3AFC8",
+                          "fillAlpha": 1
+                        }
+                      }
+                    }
+                  },
+                  "frame": {
+                    "type": "Container",
+                    "components": {
+                      "surface": {
+                        "type": "RoundedRectSurfaceComponent",
+                        "enabled": true,
+                        "data": {
+                          "width": 528,
+                          "height": 28,
+                          "radius": 14,
+                          "fillColor": "#FFF1F6",
+                          "fillAlpha": 0,
+                          "strokeColor": "#F3AFC8",
+                          "strokeWidth": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "progress": {
+            "type": "Container",
+            "props": {
+              "y": 590
+            },
+            "children": {
+              "progressText": {
+                "type": "Text",
+                "props": {
+                  "text": "0 г. 0 мес. 0 дней",
+                  "style": "startProgressText",
+                  "anchor": {
+                    "x": 0,
+                    "y": 0.5
+                  },
+                  "x": -264,
+                  "y": -40
+                }
+              },
+              "progressBar": {
+                "type": "Container",
+                "children": {
+                  "background": {
+                    "type": "Container",
+                    "components": {
+                      "surface": {
+                        "type": "RoundedRectSurfaceComponent",
+                        "enabled": true,
+                        "data": {
+                          "width": 528,
+                          "height": 28,
+                          "radius": 14,
+                          "fillColor": "#FFF1F6",
+                          "fillAlpha": 1
+                        }
+                      }
+                    }
+                  },
+                  "fill": {
+                    "type": "Container",
+                    "components": {
+                      "fillSurface": {
+                        "type": "ProgressBarFillComponent",
+                        "enabled": true,
+                        "data": {
+                          "width": 528,
+                          "height": 28,
+                          "radius": 14,
+                          "fillColor": "#F3AFC8",
+                          "fillAlpha": 1
+                        }
+                      }
+                    }
+                  },
+                  "frame": {
+                    "type": "Container",
+                    "components": {
+                      "surface": {
+                        "type": "RoundedRectSurfaceComponent",
+                        "enabled": true,
+                        "data": {
+                          "width": 528,
+                          "height": 28,
+                          "radius": 14,
+                          "fillColor": "#FFF1F6",
+                          "fillAlpha": 0,
+                          "strokeColor": "#F3AFC8",
+                          "strokeWidth": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
